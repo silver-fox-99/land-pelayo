@@ -1,0 +1,55 @@
+.similar-cases {
+  display: flex;
+  flex-direction: column;
+  margin-top: 126px;
+
+  &__title {
+    font-size: 58px;
+    text-align: center;
+    color: #06234F;
+
+    span {
+      color: #9C835C;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 32px;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 3px 8px 0px #0000001A;
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 32px;
+    width: 32%;
+    gap: 32px;
+
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__num {
+    font-size: 48px;
+    color: #E1E5EA;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: #5B6570;
+  }
+}

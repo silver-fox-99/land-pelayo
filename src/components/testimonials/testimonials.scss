@@ -1,0 +1,205 @@
+/* ===== Variables (подстрой под проект) ===== */
+$bg-section: #f3f4f6;        // светло-серый фон секции
+$card-bg: #ffffff;
+$card-shadow: 0 10px 30px rgba(18, 35, 52, .08);
+$card-radius: 16px;
+$title-color: #0b2a4a;       // тёмно-синий
+$accent: #b7925a;            // золото
+$text: #1f2a36;              // основной тёмный
+$text-muted: #66707a;        // описание и подписи
+$divider: #e9edf1;
+
+$dot: #c7cdd4;
+$dot-active: #334155;
+
+$nav-size: 40px;
+$nav-bg: rgba(255,255,255,.9);
+$nav-shadow: 0 4px 16px rgba(7, 20, 35, .15);
+
+/* ===== Section ===== */
+.testimonials {
+  background: $bg-section;
+  padding: 72px 0 84px;
+
+  &__inner {
+    padding: 0 16px;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.15;
+    letter-spacing: .4px;
+    color: $title-color;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &-accent { color: $accent; }
+  }
+}
+
+/* ===== Embla base ===== */
+.embla {
+  position: relative;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  gap: 24px;
+  /* небольшой отступ справа, чтобы было видно «хвост» следующей карточки */
+  padding: 8px 8px 16px;
+}
+
+/* Сколько карточек видно */
+.embla__slide {
+  flex: 0 0 calc(33.333% - 16px);   /* ≥1200px — 3 карточки */
+}
+
+@media (max-width: 1199px) {
+  .embla__slide { flex-basis: calc(50% - 12px); } /* 2 карточки */
+}
+@media (max-width: 767px) {
+  .embla__slide { flex-basis: 100%; }            /* 1 карточка */
+}
+
+/* ===== Card ===== */
+.testimonials__card {
+  background: $card-bg;
+  border-radius: $card-radius;
+//  box-shadow: $card-shadow;
+  padding: 20px 22px 16px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* Декоративные кавычки */
+.testimonials__quote {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  font-size: 44px;
+  line-height: 1;
+  color: $dot-active;
+  opacity: .2;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Текст отзыва */
+.testimonials__text {
+  margin: 18px 0 16px;
+  color: $text;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Разделитель над автором */
+.testimonials__divider {
+  border: 0;
+  border-top: 1px solid $divider;
+  margin: 0 0 12px;
+}
+
+/* Автор */
+.testimonials__author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto; /* «прибить» к низу карточки */
+}
+
+.testimonials__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonials__author-meta {
+  display: grid;
+  gap: 2px;
+}
+
+.testimonials__author-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: $title-color;
+}
+
+.testimonials__author-sub {
+  font-size: 12px;
+  color: $text-muted;
+}
+
+/* ===== Dots (pagination) ===== */
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.embla__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: $dot;
+  border: 0;
+  cursor: pointer;
+  transition: all .2s ease;
+
+  &.is-active {
+    width: 22px;
+    background: $dot-active;
+  }
+}
+
+/* ===== Arrows ===== */
+.embla__prev,
+.embla__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: $nav-size;
+  height: $nav-size;
+  border-radius: 999px;
+  border: 0;
+  background: $nav-bg;
+  box-shadow: $nav-shadow;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+  z-index: 2;
+
+  &:hover { transform: translateY(-50%) scale(1.06); }
+}
+
+.embla__prev { left: -4px;  }
+.embla__next { right: -4px; }
+
+/* На мобильных стрелки компактнее */
+@media (max-width: 767px) {
+  .embla__prev, .embla__next {
+    width: 34px; height: 34px;
+    left: 4px; right: 4px; /* будут поверх карточки; позиционирование под себя */
+  }
+}
+
+/* Тонкая тень у секции под слайдером как в макете */
+.testimonials__embla {
+  background: transparent;
+ // filter: drop-shadow(0 24px 32px rgba(18, 35, 52, .08));
+}

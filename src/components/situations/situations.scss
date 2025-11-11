@@ -1,0 +1,63 @@
+.situations {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 128px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__left {
+    width: 50%;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #06234F;
+    font-size: 54px;
+
+    span {
+      color: #9C835C;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+  }
+  
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    width: 48%;
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: #5B6570;
+  }
+
+  &__note {
+    margin-top: 38px;
+    font-size: 28px;
+    color: #1E344B;
+  }
+}

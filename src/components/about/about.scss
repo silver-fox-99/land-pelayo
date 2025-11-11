@@ -1,0 +1,42 @@
+.about {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 160px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+  }
+
+  &__media {
+    width: 48%;
+
+    &-frame, img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    color: #06234F;
+    font-weight: 500;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+    color: #5B6570;
+    gap: 16px;
+  }
+}
