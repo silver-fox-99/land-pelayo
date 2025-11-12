@@ -4,7 +4,6 @@ import Autoplay from "embla-carousel-autoplay";
 import './testimonials.scss'
 import icon1 from './ic1.png'
 import icon2 from './ic2.png'
-import {SignalWifiConnectedNoInternet2TwoTone} from "@mui/icons-material";
 
 
 const DATA = [

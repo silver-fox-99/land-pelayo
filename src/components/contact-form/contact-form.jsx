@@ -61,7 +61,7 @@ export function ContactForm() {
 
                     <Box component="form" noValidate onSubmit={handleSubmit}>
                         <Grid container spacing={2} columns={12}>
-                            <Grid item size={{ xs: 12, md: 6 }}>
+                            <Grid size={{ xs: 12, md: 6 }}>
                                 <TextField
                                     name="firstName"
                                     placeholder="Nombre"
@@ -71,7 +71,7 @@ export function ContactForm() {
                                     InputProps={{ sx: { borderRadius: 2 } }}
                                 />
                             </Grid>
-                            <Grid item size={{ xs: 12, md: 6 }}>
+                            <Grid size={{ xs: 12, md: 6 }}>
                                 <TextField
                                     name="lastName"
                                     placeholder="Apellido"
@@ -82,7 +82,7 @@ export function ContactForm() {
                                 />
                             </Grid>
 
-                            <Grid item size={{ xs: 12, md: 6 }}>
+                            <Grid size={{ xs: 12, md: 6 }}>
                                 <TextField
                                     type="email"
                                     name="email"
@@ -93,7 +93,7 @@ export function ContactForm() {
                                     InputProps={{ sx: { borderRadius: 2 } }}
                                 />
                             </Grid>
-                            <Grid item size={{ xs: 12, md: 6 }}>
+                            <Grid size={{ xs: 12, md: 6 }}>
                                 <TextField
                                     name="phone"
                                     placeholder="Número de teléfono"
@@ -104,7 +104,7 @@ export function ContactForm() {
                                 />
                             </Grid>
 
-                            <Grid item size={{ xs: 12 }}>
+                            <Grid size={{ xs: 12 }}>
                                 <TextField
                                     name="amount"
                                     placeholder="Importe de la inversión en EUR/USD"
@@ -115,7 +115,7 @@ export function ContactForm() {
                                 />
                             </Grid>
 
-                            <Grid item size={{ xs: 12 }} className="contact__message">
+                            <Grid size={{ xs: 12 }} className="contact__message">
                                 <Box sx={{ position: 'relative' }}>
                                     <TextField
                                         name="message"
@@ -149,7 +149,7 @@ export function ContactForm() {
                                 Enviar
                             </Button>
 
-                            <Grid item xs={12}>
+                            <Grid size={{xs:12}} >
                                 <FormControlLabel
                                     control={<Checkbox name="agree" color="primary" />}
                                     label={

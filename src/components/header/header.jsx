@@ -9,7 +9,6 @@ export function Header() {
         const target = document.getElementById('key-metrics');
         if (!target) return;
 
-        // Порог видимости — как только любой пиксель блока попадает в вьюпорт
         const io = new IntersectionObserver(
             (entries) => {
                 const entry = entries[0];
@@ -17,8 +16,8 @@ export function Header() {
             },
             {
                 root: null,
-                threshold: 0,           // 0 => достаточно минимального пересечения
-                rootMargin: '0px',      // при желании сдвиньте, напр.: '-20% 0px 0px 0px'
+                threshold: 0,
+                rootMargin: '0px',
             }
         );
 
