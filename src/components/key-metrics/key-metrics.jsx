@@ -1,7 +1,7 @@
 import './key-metrics.scss'
 
 export default function KeyMetrics() {
-    return <section className="key-metrics container" aria-labelledby="key-metrics-title">
+    return <section id="key-metrics" className="key-metrics container" aria-labelledby="key-metrics-title">
 
         <ul className="key-metrics__list">
             <li className="key-metrics__item">

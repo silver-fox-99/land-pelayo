@@ -7,10 +7,15 @@ import Situations from "./components/situations/situations";
 import About from "./components/about/about";
 import Differentiators from "./components/differentiators/differentiators";
 import Testimonials from "./components/testimonials/testimonials";
+import {ContactForm} from "./components/contact-form/contact-form";
+import {Faq} from "./components/faq/faq";
+import {Footer} from "./components/footer/footer";
+import {Header} from "./components/header/header";
 
 function App() {
   return (
     <>
+        <Header />
         <Hero />
         <KeyMetrics />
         <SimilarCases />
@@ -20,6 +25,9 @@ function App() {
         <About />
         <Differentiators />
         <Testimonials />
+        <ContactForm />
+        <Faq />
+        <Footer />
     </>
   );
 }

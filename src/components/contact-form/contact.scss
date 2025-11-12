@@ -1,0 +1,31 @@
+.contact {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  background: #06234F;
+
+  position: relative;
+
+  &__ornament {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 618px;
+    width: 300px;
+    background-repeat: no-repeat;
+
+    &--left {
+      left: 0;
+      background-position: center left;
+      background-image: url('left.svg');
+
+    }
+
+    &--right {
+      right: 0;
+      background-position: center right;
+      background-image: url('right.svg');
+    }
+  }
+}

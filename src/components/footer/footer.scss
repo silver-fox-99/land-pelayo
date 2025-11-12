@@ -1,0 +1,90 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background: #06234F;
+  padding: 96px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    max-width: 212px;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding-left: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+
+    a {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+
+  &__contacts {
+    width: 100%;
+    margin-top: 110px;
+  }
+
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    &-link, &-text {
+      font-size: 14px;
+      color: #A6AEBA;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 72px;
+
+
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+   > * {
+      font-size: 14px;
+      color: #A6AEBA;
+    }
+  }
+}

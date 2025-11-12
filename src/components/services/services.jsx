@@ -1,10 +1,10 @@
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import './services.scss'
 import s1 from './s1.jpg'
 import s2 from './s2.jpg'
 import s3 from './s3.jpg'
 import s4 from './s4.jpg'
+import expendIcon from './expendIcon.svg'
 
 export function Services() {
     return (
@@ -21,7 +21,7 @@ export function Services() {
                             </div>
 
                             <Accordion className="services__acc" elevation={0} disableGutters>
-                                <AccordionSummary className="services__acc-summary" expandIcon={<ExpandMoreIcon />}>
+                                <AccordionSummary className="services__acc-summary" expandIcon={<img src={expendIcon} alt=""/>}>
                                     <span className="services__num">01</span>
                                     <span className="services__title-main">Forex estafa</span>
                                 </AccordionSummary>
@@ -40,7 +40,7 @@ export function Services() {
                             </div>
 
                             <Accordion className="services__acc" elevation={0} disableGutters>
-                                <AccordionSummary className="services__acc-summary" expandIcon={<ExpandMoreIcon />}>
+                                <AccordionSummary className="services__acc-summary" expandIcon={<img src={expendIcon} alt=""/>}>
                                     <span className="services__num">03</span>
                                     <span className="services__title-main">Fraude de criptomonedas</span>
                                 </AccordionSummary>
@@ -60,7 +60,7 @@ export function Services() {
                             </div>
 
                             <Accordion className="services__acc" elevation={0} disableGutters>
-                                <AccordionSummary className="services__acc-summary" expandIcon={<ExpandMoreIcon />}>
+                                <AccordionSummary className="services__acc-summary" expandIcon={<img src={expendIcon} alt=""/>}>
                                     <span className="services__num">03</span>
                                     <span className="services__title-main">Estafas de trading</span>
                                 </AccordionSummary>
@@ -80,7 +80,7 @@ export function Services() {
                             </div>
 
                             <Accordion className="services__acc" elevation={0} disableGutters>
-                                <AccordionSummary className="services__acc-summary" expandIcon={<ExpandMoreIcon />}>
+                                <AccordionSummary className="services__acc-summary" expandIcon={<img src={expendIcon} alt=""/>}>
                                     <span className="services__num">04</span>
                                     <span className="services__title-main">Estafa bitcoins</span>
                                 </AccordionSummary>
